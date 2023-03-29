@@ -24,7 +24,7 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
                                                                                   changeCurrentCurrency,
                                                                               }) => {
     const viewCurrency = isBuying ? (
-        <React.Fragment>
+        <>
             <label>
                 You give the next amount of BYN:
                 <input value={amountOfBYN} data-currency="byn" onChange={changeCurrencyField} />
@@ -33,9 +33,9 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
                 You get the next amount of {currentCurrency}:
                 <input value={amountOfCurrency} data-currency="currency" onChange={changeCurrencyField} />
             </label>
-        </React.Fragment>
+        </>
     ) : (
-        <React.Fragment>
+        <>
             <label>
                 You give the next amount of {currentCurrency}:
                 <input value={amountOfCurrency} data-currency="currency" onChange={changeCurrencyField} />
@@ -44,7 +44,7 @@ const CurrencyExchange: React.FC<CurrencyExchangePropsType> = ({
                 You get the next amount of BYN:
                 <input value={amountOfBYN} data-currency="byn" onChange={changeCurrencyField} />
             </label>
-        </React.Fragment>
+        </>
     );
 
     return (
